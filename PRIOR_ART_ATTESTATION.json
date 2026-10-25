@@ -1,5 +1,6 @@
 {
   "contact": "frohmanbenjamin@gmail.com",
+  "legal_and_commercial_suite_updated_cdt": "2026-10-24T23:16:47.311914-05:00",
   "orcid": "https://orcid.org/0009-0006-7068-3718",
   "origin_provenance_dates_cdt": {
     "frankenstein_proof_loophole_discovery": "2026-10-09T14:55:31-05:00 (America/Chicago, CDT)",
@@ -17,7 +18,7 @@
       ".grok/skills/titan-audit/SKILL.md": "7233ce573c4ff7644935838d7172623af509f2481eb8be194d528707baa3cd42",
       ".zenodo.json": "4f56fd56d64f630dc722740ff7239e88fb5ae9d8dcaadfd2d68d69aff5424cfe",
       "CITATION.cff": "287a7f03ce5e812a56e29f1eed4ddde351344b62475995dccde113fa4811a46b",
-      "COMMERCIAL_LICENSING.md": "d73fbb8013cf164d9446548355ad99422d10d6ad728b0d13945e8fea86043a40",
+      "COMMERCIAL_LICENSING.md": "6a91b6480a27978eb5ed77de7d9f3be3e0a794b2b6bdaa4e1e510f2bb8255413",
       "LICENSE": "a03c0a78459b077816bf4e55e72909af4bc9e2529d34bc6bcbf9112c040a92af",
       "NOTICE": "d077278ad2bc95655784d08b99cd731290ad100034b76cd82d5958d15b8ca65e",
       "README.md": "4440158508ad512ba3d3fafd3a3e9abf21e5e0ca1884fd6e97395f6d69689fbc",
@@ -47,6 +48,10 @@
       "lean-kernel-gate/scripts/AxiomAudit_NS_Millennium_Proof.lean": "f86ee48afaafd303f6029302eaacd1f4fdab25e82fbe234cc57165d9036fb016",
       "lean-kernel-gate/scripts/audit_targets.txt": "c3296a1865a169f4bf0b8c9500821f1b514eb7e253a27100330ad8ceba83a902",
       "lean-kernel-gate/scripts/check.sh": "8dcd8f3189f77a7e8003a50fdbddc8bd35f92374fd339f937e178331c48a559d",
+      "legal/IP_HOLDING_AND_MONDAY_LLC_ASSIGNMENT_BRIDGE.md": "1857f0be6084ad189fe9605c9f1273fcdb5db1a4158c7182e092404fca4cad96",
+      "legal/MASTER_COMMERCIALIZATION_MOAT_REVENUE_AND_TARGETS_PLAYBOOK.md": "056ff493e987be5350a1cba991deb6c55de901175e0addf03882ccf1ca9f4519",
+      "legal/MASTER_COMMERCIAL_LICENSE_AND_RETROACTIVE_PROVENANCE_AGREEMENT.md": "d642ac300ac52a7edf4449765457bd32360515b6a398bfd6ec891600b4346ccf",
+      "legal/MUTUAL_NDA_AND_EVALUATION_GATEKEEPER_AGREEMENT.md": "fd4b420850959eb68506123db63a55b4cc12385ce011f41f2698cd965fc2bfa5",
       "paper/Preventing_Specification_Gaming_and_Semantic_Vacuity_in_Autonomous_Lean4_Agents.pdf": "16b06a40902f3bbe02dec9eaa9379bcc56a5669dbd5a2f02469eba5e868b2238",
       "paper/Preventing_Specification_Gaming_and_Semantic_Vacuity_in_Autonomous_Lean4_Agents.tex": "51114c337c15db9d451282e5b39671b06b1c6fc03b0673091303a1eac0293588",
       "pyproject.toml": "92238400725594b8160538f13fb07189ad1368b2781338650547ca9010bfd830",
@@ -78,9 +83,9 @@
       "workflows/titan-audit-ci.yml": "7af6ef19308a14ef573b0627b958dcbb4bbddc164ce17566dd81bb451c48e895",
       "workflows/titan-audit.yml": "7af6ef19308a14ef573b0627b958dcbb4bbddc164ce17566dd81bb451c48e895"
     },
-    "master_merkle_tree_sha256": "ba2a2ae9584538f005603cbbdd7cc257a4a38142cc162c78832a7f2d45268d08",
+    "master_merkle_tree_sha256": "89e1274b84929a9a5d3c0d218e909fcdbfdbc156062f3d3d06bf900cc1e73aa5",
     "repository": "https://github.com/BenFrohman/titan-audit (Private \u2014 All Rights Reserved)",
-    "total_files_hashed": 67
+    "total_files_hashed": 71
   },
   "public_defensive_publication": {
     "datacite_doi": "10.5281/zenodo.23630648",
