@@ -108,7 +108,7 @@ cd lean-kernel-gate
 
 ## GitHub Marketplace Action (`BenFrohman/titan-audit@v1`)
 
-Add `BenFrohman/titan-audit@v1` to any Lean 4 repository or AI benchmark workflow (`.github/workflows/titan-audit.yml`):
+Add `BenFrohman/titan-audit@v1` to any Lean 4 repository or AI benchmark workflow (`.github/workflows/titan-audit.yml`, template in `workflows/titan-audit-ci.yml`):
 
 ```yaml
 name: Titan-Audit Lean 4 Verification
