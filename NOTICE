@@ -1,24 +1,8 @@
-titan-audit & Frohmanian Four-Layer Lean 4 Verification Harness
-Copyright 2026 Benjamin Stanley Frohman. All rights reserved.
+Titan-Audit & The Frohmanian Four-Layer Lean 4 Verification Architecture
+Copyright (c) 2026 Benjamin Stanley Frohman (ORCID: https://orcid.org/0009-0006-7068-3718).
+All rights reserved.
 
-Author: Benjamin Stanley Frohman
-ORCID: https://orcid.org/0009-0006-7068-3718
-GitHub: https://github.com/BenFrohman/titan-audit
-X (Twitter): @Investor0x
-Contact: frohmanbenjamin@gmail.com
-Zenodo DOI: https://doi.org/10.5281/zenodo.23630648
+PROPRIETARY AND CONFIDENTIAL SOFTWARE — COMMERCIAL LICENSE REQUIRED.
+No permission is granted to use, copy, modify, or distribute this software or its verification rulesets without an executed written commercial license from Benjamin Stanley Frohman (frohmanbenjamin@gmail.com).
 
-This product includes software, formal verification harnesses (`titan-audit`,
-`AxiomAudit.lean`, `StandardStack.lean`, `lean-standard-stack`, and
-`frohmanian-lean-encoding`), semantic vacuity heuristics, cryptographic
-attestation schemas, and the accompanying whitepaper:
-
-  Benjamin Stanley Frohman (2026), "Preventing Specification Gaming and Semantic
-  Vacuity in Autonomous Lean 4 Formalization Agents: The Titan-Audit &
-  Frohmanian Four-Layer Verification Architecture," Zenodo,
-  DOI: 10.5281/zenodo.23630648.
-
-Pursuant to Section 4(d) of the Apache License, Version 2.0, any derivative
-work, redistribution, fork, CI/CD action, or AI benchmark pipeline that
-includes or adapts any portion of this repository must retain a readable copy
-of the attribution notices contained within this NOTICE file.
+Defensive Prior-Art Whitepaper DOI: https://doi.org/10.5281/zenodo.23630648
