@@ -1,0 +1,126 @@
+name: "Titan-Audit: Lean 4 Axiom & Vacuity Firewall"
+author: "Benjamin Stanley Frohman"
+description: "Six-stage Lean 4 verification gate: lake build, in-kernel Lean.collectAxioms audit, vacuity scanner, SHA-256 tree hash, and Ed25519 attestation."
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  project-path:
+    description: "Path to the Lean 4 / Lake project root directory to audit."
+    required: false
+    default: "."
+  fail-on-vacuity:
+    description: "Fail the workflow (exit 1) if semantic vacuity warnings (PASS_WITH_WARNINGS) are detected."
+    required: false
+    default: "false"
+  sign-report:
+    description: "Sign the canonical JSON audit report with Ed25519."
+    required: false
+    default: "true"
+  use-mathlib-cache:
+    description: "Run `lake exe cache get` prior to `lake build`."
+    required: false
+    default: "false"
+  no-build:
+    description: "Skip `lake build` and audit pre-existing `.olean` files."
+    required: false
+    default: "false"
+  output-dir:
+    description: "Directory where `report.json` and `report.md` will be written."
+    required: false
+    default: "titan-audit-report"
+  signing-key-path:
+    description: "Optional path to an Ed25519 PEM private key for signing."
+    required: false
+    default: ""
+
+outputs:
+  verdict:
+    description: "Audit verdict (`PASS`, `PASS_WITH_WARNINGS`, or `FAIL`)."
+    value: ${{ steps.run_audit.outputs.verdict }}
+  theorems-total:
+    description: "Total compiled theorems audited by `Lean.collectAxioms`."
+    value: ${{ steps.run_audit.outputs.theorems_total }}
+  theorems-clean:
+    description: "Total compiled theorems using only standard axioms (`propext`, `Classical.choice`, `Quot.sound`)."
+    value: ${{ steps.run_audit.outputs.theorems_clean }}
+  vacuity-warnings:
+    description: "Count of semantic vacuity heuristic warnings in built modules."
+    value: ${{ steps.run_audit.outputs.vacuity_warnings }}
+  tree-sha256:
+    description: "Deterministic SHA-256 hash over sorted Lean sources, lakefile, manifest, and toolchain."
+    value: ${{ steps.run_audit.outputs.tree_sha256 }}
+  report-json-path:
+    description: "Path to the generated `report.json` file."
+    value: ${{ steps.run_audit.outputs.report_json_path }}
+  report-md-path:
+    description: "Path to the generated `report.md` file."
+    value: ${{ steps.run_audit.outputs.report_md_path }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python for titan-audit
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Install titan-audit CLI
+      shell: bash
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install "${{ github.action_path }}"
+
+    - name: Run titan-audit Verification Gate
+      id: run_audit
+      shell: bash
+      run: |
+        ARGS=("${{ inputs.project-path }}" "--out-dir" "${{ inputs.output-dir }}")
+        if [ "${{ inputs.use-mathlib-cache }}" = "true" ]; then
+          ARGS+=("--cache")
+        fi
+        if [ "${{ inputs.no-build }}" = "true" ]; then
+          ARGS+=("--no-build")
+        fi
+        if [ "${{ inputs.sign-report }}" != "true" ]; then
+          ARGS+=("--no-sign")
+        elif [ -n "${{ inputs.signing-key-path }}" ]; then
+          ARGS+=("--key" "${{ inputs.signing-key-path }}")
+        fi
+        if [ "${{ inputs.fail-on-vacuity }}" = "true" ]; then
+          ARGS+=("--fail-on-warn")
+        fi
+
+        set +e
+        titan-audit "${ARGS[@]}"
+        EXIT_CODE=$?
+        set -e
+
+        REPORT_JSON="${{ inputs.output-dir }}/report.json"
+        REPORT_MD="${{ inputs.output-dir }}/report.md"
+
+        if [ -f "$REPORT_JSON" ]; then
+          python3 - "$REPORT_JSON" "$GITHUB_OUTPUT" << 'PY'
+        import json, sys
+        rep = json.load(open(sys.argv[1]))
+        with open(sys.argv[2], "a") as out:
+            out.write(f"verdict={rep['verdict']['status']}\n")
+            out.write(f"theorems_total={rep['axiom_audit']['theorems']}\n")
+            out.write(f"theorems_clean={rep['axiom_audit']['clean_theorems']}\n")
+            out.write(f"vacuity_warnings={rep['verdict'].get('vacuity_warnings_in_build', 0)}\n")
+            out.write(f"tree_sha256={rep['tree']['sha256']}\n")
+        PY
+          echo "report_json_path=$REPORT_JSON" >> "$GITHUB_OUTPUT"
+          echo "report_md_path=$REPORT_MD" >> "$GITHUB_OUTPUT"
+        fi
+
+        if [ -f "$REPORT_MD" ] && [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+          cat "$REPORT_MD" >> "$GITHUB_STEP_SUMMARY"
+        fi
+
+        if [ "${{ inputs.sign-report }}" = "true" ] && [ -f "$REPORT_JSON" ]; then
+          titan-audit verify "$REPORT_JSON"
+        fi
+
+        exit $EXIT_CODE

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Preventing Specification Gaming and Semantic Vacuity in Autonomous Lean 4 Formalization Agents: The Titan-Audit & Frohmanian Four-Layer Verification Architecture"
+message: "If you use titan-audit, the Frohmanian Lean 4 verification harness, or the semantic vacuity taxonomy, please cite this software and technical report."
+type: software
+authors:
+  - family-names: "Frohman"
+    given-names: "Benjamin Stanley"
+    orcid: "https://orcid.org/0009-0006-7068-3718"
+    email: "frohmanbenjamin@gmail.com"
+repository-code: "https://github.com/BenFrohman/titan-audit"
+url: "https://doi.org/10.5281/zenodo.23630648"
+doi: "10.5281/zenodo.23630648"
+license: "Apache-2.0"
+version: "1.0.0"
+date-released: "2026-10-24"
+keywords:
+  - "Lean 4"
+  - "Mathlib"
+  - "Formal Verification"
+  - "Specification Gaming"
+  - "Semantic Vacuity"
+  - "Autonomous Agents"
+  - "Ed25519 Attestation"

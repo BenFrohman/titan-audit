@@ -1,0 +1,4 @@
+the_standard_stack
+standard_stack_ready_iff
+LeanKernelGate.double_eq_add_self
+LeanKernelGate.add_self_nonneg

@@ -1,0 +1,251 @@
+{
+  "tool": {
+    "name": "titan-audit",
+    "version": "0.1.0",
+    "author": "Benjamin Stanley Frohman, A2ZWeb3 LLC"
+  },
+  "project": {
+    "path": "/workspace/deliverable_titanlattice/lean",
+    "name": "lean",
+    "lean_toolchain": "leanprover/lean4:v4.30.0-rc1",
+    "git_head": null
+  },
+  "build": {
+    "requested": true,
+    "exit_code": 0,
+    "success": true,
+    "jobs": 2704,
+    "errors": [],
+    "sorry_warnings": 0,
+    "unused_variable_warnings": [
+      "warning: NS_Millennium_Proof/Modules/AnalyticPipeline.lean:253:11: unused variable `x`",
+      "warning: NS_Millennium_Proof/Modules/GlobalRegularity.lean:94:27: unused variable `hν`"
+    ]
+  },
+  "axiom_audit": {
+    "ran": true,
+    "exit_code": 0,
+    "errors": [],
+    "modules": 15,
+    "theorems": 333,
+    "clean_theorems": 333,
+    "nonstandard": [],
+    "per_module": {
+      "NS_Millennium_Proof.Modules.NS_Equations": {
+        "theorems": 139,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.SymplecticTether": {
+        "theorems": 30,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.ClosureBlueprint": {
+        "theorems": 22,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.ArnoldGeometric": {
+        "theorems": 43,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.AnalyticPipeline": {
+        "theorems": 14,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.CubicSourceCertificate": {
+        "theorems": 6,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.TetheredLyapunov": {
+        "theorems": 45,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.ForMathlib.Projection": {
+        "theorems": 7,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.AssemblyGap": {
+        "theorems": 6,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.Uniqueness": {
+        "theorems": 14,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.GlobalRegularity": {
+        "theorems": 2,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.ClayStatements": {
+        "theorems": 2,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Modules.IndependentMajorant": {
+        "theorems": 2,
+        "nonstandard": 0
+      },
+      "NS_Millennium_Proof.Definitions.FrohmanianTether": {
+        "theorems": 1,
+        "nonstandard": 0
+      }
+    }
+  },
+  "source_scan": {
+    "forbidden": [],
+    "vacuity_heuristics": [
+      {
+        "kind": "real_iSup_without_BddAbove",
+        "file": "NS_Millennium_Proof/Modules/NS_Equations.lean",
+        "line": 2260,
+        "decl": "Tstar",
+        "detail": "Real iSup/sSup is 0 on unbounded ranges; downstream bounds on it may be vacuous unless BddAbove is required.",
+        "in_build": true
+      },
+      {
+        "kind": "real_iSup_without_BddAbove",
+        "file": "NS_Millennium_Proof/Modules/NS_Equations.lean",
+        "line": 2756,
+        "decl": "vorticity_sup_norm",
+        "detail": "Real iSup/sSup is 0 on unbounded ranges; downstream bounds on it may be vacuous unless BddAbove is required.",
+        "in_build": true
+      },
+      {
+        "kind": "real_iSup_without_BddAbove",
+        "file": "NS_Millennium_Proof/Modules/NS_Equations.lean",
+        "line": 2770,
+        "decl": "strain_sup_norm",
+        "detail": "Real iSup/sSup is 0 on unbounded ranges; downstream bounds on it may be vacuous unless BddAbove is required.",
+        "in_build": true
+      },
+      {
+        "kind": "real_iSup_without_BddAbove",
+        "file": "NS_Millennium_Proof/Modules/SymplecticTether.lean",
+        "line": 682,
+        "decl": "MollifiedSupNormFunctional",
+        "detail": "Real iSup/sSup is 0 on unbounded ranges; downstream bounds on it may be vacuous unless BddAbove is required.",
+        "in_build": true
+      },
+      {
+        "kind": "real_iSup_without_BddAbove",
+        "file": "NS_Millennium_Proof/Modules/TetheredLyapunov.lean",
+        "line": 502,
+        "decl": "MollifiedSupNorm",
+        "detail": "Real iSup/sSup is 0 on unbounded ranges; downstream bounds on it may be vacuous unless BddAbove is required.",
+        "in_build": true
+      }
+    ],
+    "counts": {
+      "real_iSup_without_BddAbove": 5
+    }
+  },
+  "tree": {
+    "sha256": "18d2927528565e4d45ba42a4818e2a49640b19b7110fcd6398b419264d4013b8",
+    "files": 23,
+    "entries": [
+      {
+        "path": "ForMathlib.lean",
+        "sha256": "ce69173bd762cdf4ce8291da9f18cc43ae3b56a08a8faa85f78214c4d8877909"
+      },
+      {
+        "path": "ForMathlib/NS/Tether.lean",
+        "sha256": "e69502496424dcb19960ef082cf652734b6055adf5bad3d041ea8b2cefcb1458"
+      },
+      {
+        "path": "NS_Millennium_Proof.lean",
+        "sha256": "326fcb4df0f1ab0b8b20504b9d9d0da6ac84469ed17a86a0b4c4d94d88021ce3"
+      },
+      {
+        "path": "NS_Millennium_Proof/Definitions/FrohmanianTether.lean",
+        "sha256": "cddeab2abfda94660ba10b42493900c15d9c62ca5052aee5a814ef775572e149"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/AnalyticPipeline.lean",
+        "sha256": "afd1e59b90c5a8188c69607ed764fe2bd1382422a38caa5771f803f07c7eec4f"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/ArnoldGeometric.lean",
+        "sha256": "5b20d54181275a410c1e72f74fe2ddc28f5e07dfc4085751766052bd7a014e1d"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/AssemblyGap.lean",
+        "sha256": "a49b54195e1c423f4c5325ce02d972a6900dc67f0d2f4c0b95d5f1136976f84d"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/Assumptions.lean",
+        "sha256": "86e53be493bea115dbc2a58e909274f0f36f6f435cfbfb3579fb467e4f953b18"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/ClayStatements.lean",
+        "sha256": "8c4601be7dc1346713d5929c6440a4098df1ee31038112b3d9a7cd5e2beb498b"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/ClosureBlueprint.lean",
+        "sha256": "88f62face1b8a7911bc5b833c7a92eb3a8256ca9c8de1a16438380a4e1b50719"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/CubicSourceCertificate.lean",
+        "sha256": "2cf6f090c5f7d08732ba35bfd25be84146a315d57f007cc68906c86308b35f13"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/ForMathlib/Projection.lean",
+        "sha256": "5c97047a60793ad8a06f52f47d9b0a59a90818e3584d86a93ca04fcbe22f741b"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/GlobalRegularity.lean",
+        "sha256": "dfd8601f95f3fadfa768ef5a9f80f0e183947281302343dbcf4f2f6b2c162472"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/IndependentMajorant.lean",
+        "sha256": "e88597738587a30f272fd53a6013d3b9a8e4eb91eba5f710d89fc35be38b943e"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/NS_Equations.lean",
+        "sha256": "07c3e1ab94c0e63e847520398c17980fcccba4d01936e8ec4aa147908c4f095e"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/SymplecticTether.lean",
+        "sha256": "c49eecf6930736b1df6ac8ea63f57362ec9eeda166933be615c9c16d55ff8116"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/TetheredLyapunov.lean",
+        "sha256": "8cc243592ff6ea34cd5053a43d42e979d277f9590f9139954a99319bc9227670"
+      },
+      {
+        "path": "NS_Millennium_Proof/Modules/Uniqueness.lean",
+        "sha256": "e8b858cf4932e86b0e898a525eace908afaf6f3ec3868e942c9b67ccfb397c27"
+      },
+      {
+        "path": "examples/UniquenessExample.lean",
+        "sha256": "eeda25d63ef475afdc0b6980ab9dd15e6059b19d3795176a7a217bc5da2c38ab"
+      },
+      {
+        "path": "lake-manifest.json",
+        "sha256": "b81d814b7d2d2d2821b03ed679324d5e7ec7da674e0a977352d01c88cbe8ccb8"
+      },
+      {
+        "path": "lakefile.lean",
+        "sha256": "fedeffba96d5268f8fb4aa28539ca863c2355d0e9ada2aac09d0d352373e5f3d"
+      },
+      {
+        "path": "lean-toolchain",
+        "sha256": "1098ca8368e0db12138f33b070187e1f6527984ae0451a587b20e3e661f96a76"
+      },
+      {
+        "path": "scripts/AxiomAudit.lean",
+        "sha256": "9eb8bd03eb5c97aa58ff7de00d8487d211c5af2f0800825f3157a2bb37eb5acd"
+      }
+    ],
+    "method": "sha256 of 'sha256  path\\n' lines, sorted by path, over *.lean (excluding .lake/.git) + lakefile/manifest/toolchain"
+  },
+  "verdict": {
+    "status": "PASS_WITH_WARNINGS",
+    "reasons": [],
+    "vacuity_warnings_in_build": 5
+  },
+  "generated_at_utc": "2026-10-23T06:52:59+00:00",
+  "signature": {
+    "alg": "ed25519",
+    "public_key_b64": "ZOyujV1yUEldQRZEDhmXCHa4ikWGfcTD+meZYssNLpo=",
+    "payload": "canonical JSON of report without 'signature' (sort_keys, compact, UTF-8)",
+    "value_b64": "u5WWJea+TiD3OD89EDb1+5/7+i5ftZgWwc1amoMyZqWQqH//ELmPZp3EEK0SjkqfNMUzwxKbgsvpg3Lwqg0fAA=="
+  }
+}
