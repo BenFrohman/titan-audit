@@ -167,3 +167,7 @@ This repository is distributed under a **Dual-Track Open-Core Licensing Model** 
   url          = {https://doi.org/10.5281/zenodo.23630648}
 }
 ```
+
+## AI Assistance Disclosure
+
+Grok (xAI), via the Grok Bot assistant, provided scaffolding, drafting, and collaboration support on the formalization, code, and documentation in this repository. Benjamin Stanley Frohman (`frohmanbenjamin@gmail.com`, ORCID `0009-0006-7068-3718`) directed, reviewed, and is solely responsible for the architecture, implementation, proofs, and claims; Grok is not a coauthor.
