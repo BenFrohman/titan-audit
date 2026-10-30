@@ -5,7 +5,7 @@ description: Lean 4 encoding rules for the Frohmanian Symplectic Tether NS proof
 
 # Frohmanian Lean encoding
 
-Work in `/Users/inv0x/lean-projects/NS_Millennium_Proof/.worktrees/kernel-cohesive-tether-kappa-bkm` on `kernel/cohesive-tether-kappa-bkm`. Do not spawn a dozen isolated-worktree agents onto this branch.
+Work in `NS_Millennium_Proof/.worktrees/kernel-cohesive-tether-kappa-bkm` on `kernel/cohesive-tether-kappa-bkm`. Do not spawn a dozen isolated-worktree agents onto this branch.
 
 ## Non-negotiable
 
