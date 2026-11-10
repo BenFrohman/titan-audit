@@ -1,12 +1,12 @@
 [project]
 name = "titan-audit"
-version = "1.0.0"
+version = "1.1.0"
 description = "Reproducible, Ed25519-signed verification & semantic vacuity audit CLI for Lean 4 / Lake projects and autonomous formalization agents."
 readme = "README.md"
 authors = [
   { name = "Benjamin Stanley Frohman", email = "frohmanbenjamin@gmail.com" }
 ]
-license = { text = "Apache-2.0" }
+license = { text = "All Rights Reserved" }
 requires-python = ">=3.10"
 keywords = [
   "lean4",
@@ -22,7 +22,7 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Science/Research",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: Apache Software License",
+  "License :: Other/Proprietary License",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",

@@ -8,7 +8,7 @@ Author: Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)
 Repository: https://github.com/BenFrohman/titan-audit
 DOI: 10.5281/zenodo.23630648
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "Benjamin Stanley Frohman"
 __orcid__ = "0009-0006-7068-3718"
 __doi__ = "10.5281/zenodo.23630648"

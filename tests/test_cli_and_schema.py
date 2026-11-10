@@ -19,7 +19,7 @@ def test_cli_version(capsys):
     rc = main(["--version"])
     assert rc == 0
     out = capsys.readouterr().out
-    assert "titan-audit 1.0.0" in out
+    assert "titan-audit 1.1.0" in out
 
 
 def test_cli_verify_example_report(capsys):

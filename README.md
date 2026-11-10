@@ -1,7 +1,7 @@
 # Titan-Audit & The Frohmanian Four-Layer Lean 4 Verification Architecture
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23630648.svg)](https://doi.org/10.5281/zenodo.23630648)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](./LICENSE)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--7068--3718-A6CE39.svg)](https://orcid.org/0009-0006-7068-3718)
 [![Lean 4](https://img.shields.io/badge/Lean_4-v4.30.0--rc1-orange.svg)](https://lean-lang.org/)
 
@@ -67,11 +67,11 @@ titan-audit/
 ├── tests/                          # Pytest unit & CLI integration test suite (15 tests)
 ├── action.yml                      # GitHub Marketplace Action (icon: shield, color: blue)
 ├── pyproject.toml                  # PEP 621 package configuration (`pip install .`)
-├── COMMERCIAL_LICENSING.md         # Dual-Track Open-Core (Apache-2.0) & Enterprise Licensing
+├── COMMERCIAL_LICENSING.md         # Commercial licensing terms and inquiries
 ├── CITATION.cff                    # Citation File Format metadata (DOI: 10.5281/zenodo.23630648)
 ├── .zenodo.json                    # Zenodo / InvenioRDM deposit metadata
-├── LICENSE                         # Apache License, Version 2.0 (Copyright 2026 Benjamin Stanley Frohman)
-└── NOTICE                          # Mandatory Apache-2.0 Sec. 4(d) attribution notice
+├── LICENSE                         # Proprietary All Rights Reserved (Copyright 2026 Benjamin Stanley Frohman)
+└── NOTICE                          # Proprietary ownership and contact notice
 ```
 
 ---
@@ -144,12 +144,13 @@ jobs:
 
 ---
 
-## Dual-Track Licensing: Open-Core (`Apache-2.0`) & Commercial Enterprise
+## License
 
-This repository is distributed under a **Dual-Track Open-Core Licensing Model** (see [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) for complete terms):
+This repository is proprietary commercial software. Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved. See [`LICENSE`](./LICENSE) and [`NOTICE`](./NOTICE).
 
-- **Open-Core Community Edition ([`Apache-2.0`](./LICENSE)):** All code and documentation in this repository are licensed under the **Apache License, Version 2.0** (`Copyright 2026 Benjamin Stanley Frohman`). Under Section 4(d) of the Apache-2.0 License, all redistributions, forks, and AI benchmark pipelines must preserve the root [`NOTICE`](./NOTICE) file attributing **Benjamin Stanley Frohman** (`ORCID: 0009-0006-7068-3718`) and Zenodo DOI `10.5281/zenodo.23630648`.
-- **Enterprise & Custom Benchmark Edition (Commercial License):** Custom domain-specific semantic vacuity rulesets (PDE/CFD analytical bridge auditors, cryptographic/zk-circuit specification auditors, smart-contract invariant auditors), low-latency RLHF/RLFF reward-firewall integrations, and managed HSM-backed Ed25519 attestation authorities are available under a commercial license from **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / `@Investor0x`).
+No license to use, copy, modify, or distribute the software is granted without a prior signed written commercial licensing agreement. Publication of the architectural whitepaper ([`10.5281/zenodo.23630648`](https://doi.org/10.5281/zenodo.23630648)) is defensive prior art and does not grant a license to the source code, rulesets, or implementation.
+
+For commercial licensing inquiries, including custom domain-specific semantic vacuity rulesets, CI/CD integrations, and managed attestation, see [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) or contact **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / ORCID `0009-0006-7068-3718` / [`@Investor0x`](https://x.com/Investor0x)).
 
 ---
 
