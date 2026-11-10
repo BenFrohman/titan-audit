@@ -163,7 +163,7 @@ For commercial licensing inquiries, including custom domain-specific semantic va
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {1.0.0},
+  version      = {1.1.0},
   doi          = {10.5281/zenodo.23630648},
   url          = {https://doi.org/10.5281/zenodo.23630648}
 }

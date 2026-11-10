@@ -1,4 +1,4 @@
-# IP scope (Copyright 2026 Benjamin Stanley Frohman, Apache-2.0)
+# IP scope (Copyright 2026 Benjamin Stanley Frohman, All Rights Reserved)
 
 **Not the user's IP.** These are third-party works under their own licenses
 (Apache-2.0) and are used, not owned:
@@ -16,4 +16,4 @@ This harness copies no code from any of them; it only references them by name an
 
 Note: authored modules already published under Apache-2.0 remain usable by others under that license; authorship is retained, exclusivity is not.
 
-**License suggestion (not decided):** Apache-2.0 for the whole harness (matches Lean/Mathlib and the NS repo, includes a patent grant), or CC-BY-4.0 for the docs plus Apache-2.0 for scripts/Lean. Apache-2.0 for everything is the simplest.
+**License (decided):** this harness, in this repository, is proprietary All Rights Reserved software as described in the root `LICENSE`. The earlier Apache-2.0 suggestion is superseded. Third-party Lean, Mathlib, and related tools remain under their own licenses, and modules already published under Apache-2.0 remain usable under those prior terms.

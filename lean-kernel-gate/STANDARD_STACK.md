@@ -1,6 +1,6 @@
 # The Standard Stack
 
-Author: Benjamin Stanley Frohman · Published v1.0.0 (Apache-2.0, Copyright 2026 Benjamin Stanley Frohman)
+Author: Benjamin Stanley Frohman · v1.0.0 was published under Apache-2.0; the current tree is All Rights Reserved (Copyright 2026 Benjamin Stanley Frohman)
 
 Sources: extracted from `.grok/skills/lean-standard-stack/SKILL.md`,
 `.grok/skills/lean-standard-stack/StandardStack.lean`,
@@ -25,7 +25,7 @@ Tags: **[found]** = stated in those files. **[inferred]** = my wording of a rule
   ```
   /-
   Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-  Released under Apache 2.0 license as described in the file LICENSE.
+  Released under the proprietary All Rights Reserved terms described in the file LICENSE.
   Authors: Benjamin Stanley Frohman
   -/
   ```
