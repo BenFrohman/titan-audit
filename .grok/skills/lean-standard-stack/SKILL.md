@@ -41,7 +41,7 @@ On original Lean files in this repository, the copyright block is exactly:
 ```lean
 /-
 Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
+Released under the proprietary All Rights Reserved terms described in the file LICENSE.
 Authors: Benjamin Stanley Frohman
 -/
 ```
@@ -57,7 +57,7 @@ GitHub: @BenFrohman
 
 If Grok Heavy scaffolded the change, the commit message also says so, in the body, not as `Co-authored-by`. Git author and committer stay `Benjamin Stanley Frohman <frohmanbenjamin@gmail.com>`. Do not rewrite history. Do not force-push `main`.
 
-Own-repo license is Apache-2.0 as in `LICENSE`, with the copyright notice in `COPYRIGHT.md`. That is not a second, incompatible copyright lock.
+Own-repo license is All Rights Reserved as in `LICENSE`. That file is the license of this repository.
 
 ## Migration into a shared community
 
@@ -93,7 +93,7 @@ Stop and report, do not push, if:
 
 <!--
 Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
+Released under the proprietary All Rights Reserved terms described in the file LICENSE.
 Authors: Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)
 DOI: 10.5281/zenodo.23630648
 -->

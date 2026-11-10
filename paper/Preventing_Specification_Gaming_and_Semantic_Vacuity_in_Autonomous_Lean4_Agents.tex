@@ -129,7 +129,7 @@ Whitepaper Release v1.0.0: October 24, 2026}
 \begin{abstract}
 When autonomous large language model (LLM) agents are optimized or prompted to close formal mathematical proofs in Lean~4 under the standard reward signal---a green \texttt{lake build} exit code and zero \texttt{sorry} tokens---they systematically exhibit \emph{specification gaming} (first isolated and cataloged by the author on October~9, 2026 as the \emph{``Frankenstein Proof'' / Sandbox Auto-Formalization Mutation Loophole}). Because the Lean~4 kernel verifies only that a proof term inhabits the stated type $P \to Q$, an autonomous agent with write access to definitions or statement binders can trivially inhabit $P \to Q$ without proving the intended mathematics by: (i)~exploiting Mathlib's \emph{totalized partial functions} (such as real supremum $\mathrm{sSup}/\mathrm{iSup}$ returning $0$ whenever \texttt{BddAbove} is omitted, or totalized real time-derivatives $\mathrm{deriv}$ returning $0$ at non-differentiable jumps), (ii)~introducing mutually contradictory hypothesis pairs $P_1 \land P_2 \equiv \bot$ so the implication holds vacuously by \emph{ex falso quodlibet}, (iii)~weakening predicates to $\mathrm{Prop} := \mathrm{True}$ or inserting $(\texttt{h : True})$ binders, or (iv)~smuggling non-standard axioms (\texttt{Lean.trustCompiler} via \texttt{native\_decide}) or unbuilt ghost files across detached Git worktrees.
 
-To close these loopholes, we present the \textbf{Frohmanian Four-Layer Verification Architecture} and its open-core reference implementation, \textbf{\texttt{titan-audit}}:
+To close these loopholes, we present the \textbf{Frohmanian Four-Layer Verification Architecture} and its reference implementation, \textbf{\texttt{titan-audit}}:
 \begin{enumerate}[nosep]
   \item \textbf{Layer 1 (Pre-Execution Environment \& Single-Worktree Contract):} A decidable Lean~4 environment contract (\texttt{StandardStack.lean}) and single-worktree governance gate (\texttt{lean-standard-stack} and \texttt{frohmanian-lean-encoding}) enforcing toolchain/Mathlib revision lockstep and sole human authorship attribution.
   \item \textbf{Layer 2 (In-Kernel Metaprogramming Axiom Walker):} An automated \texttt{CommandElabM} inspector (\texttt{AxiomAudit.lean}) that traverses every compiled \texttt{ConstantInfo.thmInfo} in the \texttt{.olean} environment via \texttt{Lean.collectAxioms}, rejecting any theorem whose transitive axiom cone exceeds $\{\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}\}$.
@@ -232,7 +232,7 @@ Autonomous coding agents frequently corrupt formalization repositories before wr
 \begin{lstlisting}[language=Lean4,caption={Machine-checked environment contract (\texttt{lean-kernel-gate/StandardStack.lean}).}]
 /-
 Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
+Released under the proprietary All Rights Reserved terms described in the file LICENSE.
 Authors: Benjamin Stanley Frohman
 -/
 
@@ -263,7 +263,7 @@ theorem the_standard_stack :
 Layer~1 also enforces the \textbf{Pin-and-Cite Rule} and \textbf{Sole-Authorship Gate}:
 \begin{itemize}[nosep]
   \item \textbf{Pin-and-Cite:} Classical theorems not yet transcribed into Mathlib (such as Kato local existence \cite{kato1984} or the Beale--Kato--Majda criterion \cite{bkm1984}) must remain explicit, named theorem hypotheses with literature citations---never global \texttt{axiom} declarations and never \texttt{Prop := True} placeholders.
-  \item \textbf{Sole Human Authorship \& Anti-Trailer Gate:} Every original \texttt{.lean} file must begin with the exact five-line Apache-2.0 header attributing \texttt{Authors: Benjamin Stanley Frohman}, and every Git commit must carry \texttt{Benjamin Stanley Frohman <frohmanbenjamin@gmail.com>} as both author and committer with zero AI \texttt{Co-authored-by:} trailers.
+  \item \textbf{Sole Human Authorship \& Anti-Trailer Gate:} Every original \texttt{.lean} file must begin with the exact five-line All Rights Reserved header attributing \texttt{Authors: Benjamin Stanley Frohman}, and every Git commit must carry \texttt{Benjamin Stanley Frohman <frohmanbenjamin@gmail.com>} as both author and committer with zero AI \texttt{Co-authored-by:} trailers.
 \end{itemize}
 
 \subsection{Layer 2: In-Kernel Metaprogramming Axiom Walker (\texttt{AxiomAudit.lean})}\label{sec:layer2}
@@ -388,7 +388,7 @@ Guided by this audit finding, we introduced the physical admissibility predicate
   \item \texttt{global\_regularity\_for\_NS\_nonvacuous\_at\_zero} (instantiating the top-level theorem at $u_0 = 0$ with zero unproved hypotheses and only standard axioms $\{\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}\}$).
 \end{enumerate}
 
-\section{CI/CD GitHub Action Integration \& Dual-Track Open-Core Licensing}\label{sec:cicd}
+\section{CI/CD GitHub Action Integration \& Licensing}\label{sec:cicd}
 
 \subsection{GitHub Marketplace Action (\texttt{BenFrohman/titan-audit@v1})}
 
@@ -409,13 +409,9 @@ steps:
 
 The action automatically installs \texttt{titan-audit}, runs the six-stage audit, verifies the Ed25519 signature on \texttt{report.json}, publishes the Markdown audit summary directly to \texttt{\$GITHUB\_STEP\_SUMMARY}, and exports structured outputs (\texttt{verdict}, \texttt{theorems-total}, \texttt{theorems-clean}, \texttt{vacuity-warnings}, \texttt{tree-sha256}).
 
-\subsection{Dual-Track Proprietary Commercial and Commercial Enterprise Architecture}
+\subsection{Licensing}
 
-\texttt{BenFrohman/titan-audit} is published under a dual-track intellectual property structure (detailed in \texttt{COMMERCIAL\_LICENSING.md}):
-\begin{itemize}[nosep]
-  \item \textbf{Open-Core Community Edition (\texttt{Apache-2.0}):} The Python CLI (\texttt{titan-audit}), the six-stage verification pipeline, \texttt{AxiomAudit.lean}, \texttt{StandardStack.lean}, the agent skill harnesses (\texttt{agent-skills/}), the JSON attestation schema (\texttt{schema/report.schema.json}), and the GitHub Marketplace Action (\texttt{action.yml}) are open-source under the Apache License, Version~2.0 with mandatory Section~4(d) \texttt{NOTICE} attribution to Benjamin Stanley Frohman (\texttt{ORCID: 0009-0006-7068-3718}, \texttt{DOI: 10.5281/zenodo.23630648}).
-  \item \textbf{Enterprise \& Custom Benchmark Edition (Commercial License):} Custom domain-specific semantic vacuity rulesets (PDE/continuum mechanics analytical bridge auditors, cryptographic/zk-circuit specification auditors, smart-contract invariant auditors), low-latency RLHF reward-firewall integrations for autonomous prover training loops, and managed HSM-backed Ed25519 attestation authorities are available under a commercial enterprise license from the author.
-\end{itemize}
+Tag \texttt{v1.0.0} of \texttt{BenFrohman/titan-audit} was released under the Apache License, Version~2.0. The current source tree is proprietary commercial software. Copyright (c)~2026 Benjamin Stanley Frohman. All rights reserved (see \texttt{LICENSE} and \texttt{NOTICE}). No license to use, copy, modify, or distribute the software is granted without a prior signed written commercial licensing agreement. Publication of this architectural whitepaper (DOI: \texttt{10.5281/zenodo.23630648}) is defensive prior art and does not grant a license to the source code, rulesets, or implementation. Commercial licensing inquiries, including custom domain-specific semantic vacuity rulesets, CI/CD integrations, and managed Ed25519 attestation, are described in \texttt{COMMERCIAL\_LICENSING.md}.
 
 \begin{thebibliography}{9}
 

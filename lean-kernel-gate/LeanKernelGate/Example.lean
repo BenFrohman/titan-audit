@@ -1,13 +1,13 @@
 /-
 Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
+Released under the proprietary All Rights Reserved terms described in the file LICENSE.
 Authors: Benjamin Stanley Frohman
 -/
 
 /-!
 # Example Verified Module (`LeanKernelGate.Example`)
 
-Self-contained kernel-verified fixture demonstrating the five-line Apache-2.0
+Self-contained kernel-verified fixture demonstrating the five-line All Rights Reserved
 sole-authorship header, decidable environment contract (`StandardStack`), and
 zero-`sorry` theorem verification under `AxiomAudit.lean`.
 -/

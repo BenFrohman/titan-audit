@@ -3,15 +3,16 @@
   "upload_type": "publication",
   "publication_type": "technicalnote",
   "publication_date": "2026-10-24",
-  "version": "1.0.0",
-  "license": "Apache-2.0",
+  "version": "1.1.0",
+  "license": "other-closed",
   "creators": [
     {
       "name": "Frohman, Benjamin Stanley",
+      "affiliation": "Independent Researcher, Texas, United States",
       "orcid": "0009-0006-7068-3718"
     }
   ],
-  "description": "Flagship open-core repository and technical whitepaper unifying titan-audit, AxiomAudit.lean, StandardStack.lean, lean-standard-stack, and frohmanian-lean-encoding to prevent specification gaming (Frankenstein proofs) and semantic vacuity in autonomous Lean 4 formalization agents.",
+  "description": "Flagship repository and technical whitepaper unifying titan-audit, AxiomAudit.lean, StandardStack.lean, lean-standard-stack, and frohmanian-lean-encoding to prevent specification gaming (Frankenstein proofs) and semantic vacuity in autonomous Lean 4 formalization agents. Contact: Benjamin Stanley Frohman <frohmanbenjamin@gmail.com> (ORCID: 0009-0006-7068-3718).",
   "keywords": [
     "Lean 4",
     "Formal Verification",
@@ -31,7 +32,7 @@
     {
       "scheme": "doi",
       "identifier": "10.5281/zenodo.23630648",
-      "relation": "isIdenticalTo",
+      "relation": "references",
       "resource_type": "publication-technicalnote"
     }
   ]
