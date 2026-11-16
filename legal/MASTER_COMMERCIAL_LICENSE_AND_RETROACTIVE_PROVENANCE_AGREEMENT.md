@@ -1,3 +1,5 @@
+> **License update (16 November 2026):** The `titan-audit` project is now licensed under the Apache License, Version 2.0 (see the repository root `LICENSE`). This commercial-license document applies only to releases and copies distributed before 16 November 2026. It is preserved for provenance and is not deleted.
+
 # MASTER COMMERCIAL LICENSE, CRYPTOGRAPHIC PROVENANCE & RETROACTIVE ENFORCEMENT AGREEMENT
 
 **EFFECTIVE DATE OF PUBLIC PROVENANCE NOTICE:** June 1, 2026 – October 24, 2026 (America/Chicago, CDT / UTC-5)  

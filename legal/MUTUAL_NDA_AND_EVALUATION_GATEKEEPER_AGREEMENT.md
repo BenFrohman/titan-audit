@@ -1,3 +1,5 @@
+> **License update (16 November 2026):** The `titan-audit` project is now licensed under the Apache License, Version 2.0 (see the repository root `LICENSE`). This commercial-license document applies only to releases and copies distributed before 16 November 2026. It is preserved for provenance and is not deleted.
+
 # MUTUAL NON-DISCLOSURE, RESTRICTED-DOI UNLOCK & TECHNICAL EVALUATION GATEKEEPER AGREEMENT
 
 **THIS MUTUAL NON-DISCLOSURE AND RESTRICTED EVALUATION AGREEMENT** (the **"Agreement"**) is required prior to unlocking any restricted CERN/DataCite Zenodo deposit (`access.files = "restricted"`), granting temporary read access to any private GitHub repository (`BenFrohman/titan-audit`, `BenFrohman/sealguard`, `BenFrohman/hlex-latent-exchange-fabric`, `BenFrohman/modular-robotic-excitation-arms`, etc.), or delivering any evaluation container or pitch deck.

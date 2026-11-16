@@ -1,7 +1,7 @@
 # Titan-Audit & The Frohmanian Four-Layer Lean 4 Verification Architecture
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23630648.svg)](https://doi.org/10.5281/zenodo.23630648)
-[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](./LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--7068--3718-A6CE39.svg)](https://orcid.org/0009-0006-7068-3718)
 [![Lean 4](https://img.shields.io/badge/Lean_4-v4.30.0--rc1-orange.svg)](https://lean-lang.org/)
 
@@ -70,8 +70,8 @@ titan-audit/
 ├── COMMERCIAL_LICENSING.md         # Commercial licensing terms and inquiries
 ├── CITATION.cff                    # Citation File Format metadata (DOI: 10.5281/zenodo.23630648)
 ├── .zenodo.json                    # Zenodo / InvenioRDM deposit metadata
-├── LICENSE                         # Proprietary All Rights Reserved (Copyright 2026 Benjamin Stanley Frohman)
-└── NOTICE                          # Proprietary ownership and contact notice
+├── LICENSE                         # Apache License 2.0 (Copyright 2026 Benjamin Stanley Frohman)
+└── NOTICE                          # Copyright and Apache 2.0 notice
 ```
 
 ---
@@ -146,11 +146,11 @@ jobs:
 
 ## License
 
-This repository is proprietary commercial software. Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved. See [`LICENSE`](./LICENSE) and [`NOTICE`](./NOTICE).
+Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
 
-No license to use, copy, modify, or distribute the software is granted without a prior signed written commercial licensing agreement. Publication of the architectural whitepaper ([`10.5281/zenodo.23630648`](https://doi.org/10.5281/zenodo.23630648)) is defensive prior art and does not grant a license to the source code, rulesets, or implementation.
+Licensed under the Apache License, Version 2.0. See [`LICENSE`](./LICENSE) and [`NOTICE`](./NOTICE).
 
-For commercial licensing inquiries, including custom domain-specific semantic vacuity rulesets, CI/CD integrations, and managed attestation, see [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) or contact **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / ORCID `0009-0006-7068-3718` / [`@Frohmanian`](https://x.com/Frohmanian)).
+Commercial-license documents in [`legal/`](./legal/) and [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) apply only to releases and copies distributed before 16 November 2026. They are preserved for provenance. Contact **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / ORCID `0009-0006-7068-3718` / [`@Frohmanian`](https://x.com/Frohmanian)).
 
 ---
 
@@ -163,7 +163,7 @@ For commercial licensing inquiries, including custom domain-specific semantic va
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {1.1.0},
+  version      = {1.2.0},
   doi          = {10.5281/zenodo.23630648},
   url          = {https://doi.org/10.5281/zenodo.23630648}
 }

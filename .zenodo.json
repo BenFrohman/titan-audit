@@ -3,8 +3,8 @@
   "upload_type": "publication",
   "publication_type": "technicalnote",
   "publication_date": "2026-10-24",
-  "version": "1.1.0",
-  "license": "other-closed",
+  "version": "1.2.0",
+  "license": "apache-2.0",
   "creators": [
     {
       "name": "Frohman, Benjamin Stanley",

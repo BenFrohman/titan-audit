@@ -96,5 +96,9 @@
     "zenodo_record_id": "23630648"
   },
   "schema": "frohman-prior-art-timestamp/v1",
-  "title": "Titan-Audit & The Frohmanian Four-Layer Lean 4 Verification Architecture"
+  "title": "Titan-Audit & The Frohmanian Four-Layer Lean 4 Verification Architecture",
+  "current_license_as_of_2026-11-16": {
+    "license": "Apache-2.0",
+    "note": "The repository string in private_source_proof_of_possession records the license status at the time of this attestation. As of 16 November 2026 the project is licensed under the Apache License, Version 2.0."
+  }
 }

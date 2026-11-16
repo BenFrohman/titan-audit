@@ -1,3 +1,5 @@
+> **License update (16 November 2026):** This repository is now licensed under the Apache License, Version 2.0 (see the root [`LICENSE`](./LICENSE)). The commercial-license text below applies only to releases and copies distributed before 16 November 2026. It is preserved for provenance and is not deleted.
+
 # Strict Proprietary Licensing, Retroactive Provenance & IP Policy — `titan-audit`
 
 **Copyright (c) 2026 Benjamin Stanley Frohman** ([ORCID: 0009-0006-7068-3718](https://orcid.org/0009-0006-7068-3718))  
