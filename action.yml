@@ -1,6 +1,6 @@
 name: "Titan-Audit: Lean 4 Axiom & Vacuity Firewall"
 author: "Benjamin Stanley Frohman"
-description: "Six-stage Lean 4 verification gate: lake build, in-kernel Lean.collectAxioms audit, vacuity scanner, SHA-256 tree hash, and Ed25519 attestation."
+description: "Lean 4 gate: lake build, kernel axiom audit, vacuity scan, SHA-256 tree hash, and an Ed25519-signed report."
 branding:
   icon: "shield"
   color: "blue"
