@@ -1,3 +1,5 @@
+> **License update (16 November 2026):** The `titan-audit` project is now licensed under the Apache License, Version 2.0 (see the repository root `LICENSE`). This commercial-license document applies only to releases and copies distributed before 16 November 2026. It is preserved for provenance and is not deleted.
+
 # INTELLECTUAL PROPERTY HOLDING ARCHITECTURE & MONDAY TEXAS LLC ROLLOVER BRIDGE
 
 **PREPARED FOR:** **Benjamin Stanley Frohman** (`ORCID: 0009-0006-7068-3718`)  

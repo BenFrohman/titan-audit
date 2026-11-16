@@ -1,6 +1,6 @@
 /-
 Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
-Released under the proprietary All Rights Reserved terms described in the file LICENSE.
+Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Benjamin Stanley Frohman
 -/
 
@@ -11,6 +11,12 @@ Authors: Benjamin Stanley Frohman
 
 import Lean
 import LeanKernelGate
+
+/-!
+# lean-kernel-gate.AxiomAudit
+
+Machine-checked Lean 4 module.
+-/
 
 open Lean Elab Command
 

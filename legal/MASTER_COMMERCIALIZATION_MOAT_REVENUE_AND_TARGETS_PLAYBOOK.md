@@ -1,3 +1,5 @@
+> **License update (16 November 2026):** The `titan-audit` project is now licensed under the Apache License, Version 2.0 (see the repository root `LICENSE`). This commercial-license document applies only to releases and copies distributed before 16 November 2026. It is preserved for provenance and is not deleted.
+
 # MASTER COMMERCIALIZATION, INVESTOR MOAT, REVENUE MODEL & TARGET DIRECTORY PLAYBOOK
 ## The Frohman Proprietary IP Portfolio (`Titan-Audit`, `SealGuard`, `HLEX`, `Sentinel Gate` / `Agentic-Dev`, `Frohman V13` & `Modular Robotic Excitation Arms`)
 
