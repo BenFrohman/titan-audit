@@ -5,7 +5,7 @@
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--7068--3718-A6CE39.svg)](https://orcid.org/0009-0006-7068-3718)
 [![Lean 4](https://img.shields.io/badge/Lean_4-v4.30.0--rc1-orange.svg)](https://lean-lang.org/)
 
-**Author:** Benjamin Stanley Frohman ([ORCID: `0009-0006-7068-3718`](https://orcid.org/0009-0006-7068-3718) · [`@BenFrohman`](https://github.com/BenFrohman) · [`@Investor0x`](https://x.com/Investor0x) · `frohmanbenjamin@gmail.com`)  
+**Author:** Benjamin Stanley Frohman ([ORCID: `0009-0006-7068-3718`](https://orcid.org/0009-0006-7068-3718) · [`@BenFrohman`](https://github.com/BenFrohman) · [`@Frohmanian`](https://x.com/Frohmanian) · `frohmanbenjamin@gmail.com`)  
 **Permanent DataCite Zenodo DOI:** [`10.5281/zenodo.23630648`](https://doi.org/10.5281/zenodo.23630648)  
 **Formal Whitepaper (PDF):** [`Titan_Audit_Specification_Gaming_and_Semantic_Vacuity_Whitepaper_2026.pdf`](./Titan_Audit_Specification_Gaming_and_Semantic_Vacuity_Whitepaper_2026.pdf) ([LaTeX Source](./paper/Preventing_Specification_Gaming_and_Semantic_Vacuity_in_Autonomous_Lean4_Agents.tex))
 
@@ -150,7 +150,7 @@ This repository is proprietary commercial software. Copyright (c) 2026 Benjamin 
 
 No license to use, copy, modify, or distribute the software is granted without a prior signed written commercial licensing agreement. Publication of the architectural whitepaper ([`10.5281/zenodo.23630648`](https://doi.org/10.5281/zenodo.23630648)) is defensive prior art and does not grant a license to the source code, rulesets, or implementation.
 
-For commercial licensing inquiries, including custom domain-specific semantic vacuity rulesets, CI/CD integrations, and managed attestation, see [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) or contact **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / ORCID `0009-0006-7068-3718` / [`@Investor0x`](https://x.com/Investor0x)).
+For commercial licensing inquiries, including custom domain-specific semantic vacuity rulesets, CI/CD integrations, and managed attestation, see [`COMMERCIAL_LICENSING.md`](./COMMERCIAL_LICENSING.md) or contact **Benjamin Stanley Frohman** (`frohmanbenjamin@gmail.com` / ORCID `0009-0006-7068-3718` / [`@Frohmanian`](https://x.com/Frohmanian)).
 
 ---
 

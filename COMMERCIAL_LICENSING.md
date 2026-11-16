@@ -32,4 +32,4 @@ To execute the Gatekeeper MNDA or request an Enterprise / Government Commercial 
 - **Sole Owner & Principal Inventor:** Benjamin Stanley Frohman
 - **Email:** `frohmanbenjamin@gmail.com`
 - **ORCID:** [`0009-0006-7068-3718`](https://orcid.org/0009-0006-7068-3718)
-- **X:** [`@Investor0x`](https://x.com/Investor0x)
+- **X:** [`@Frohmanian`](https://x.com/Frohmanian)
