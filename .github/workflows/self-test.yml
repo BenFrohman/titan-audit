@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   self-test-local:
-    name: Self-test (uses: ./)
+    name: "Self-test (uses: ./)"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -57,7 +57,7 @@ jobs:
           test -f "${{ steps.audit.outputs.report-md-path }}"
 
   marketplace-pin:
-    name: Marketplace pin (uses: BenFrohman/titan-audit@v1.2.0)
+    name: "Marketplace pin (uses: BenFrohman/titan-audit@v1.2.0)"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
