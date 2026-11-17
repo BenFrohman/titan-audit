@@ -10,12 +10,22 @@ authors:
     email: "frohmanbenjamin@gmail.com"
     affiliation: "Independent Researcher, Texas, United States"
 repository-code: "https://github.com/BenFrohman/titan-audit"
-url: "https://doi.org/10.5281/zenodo.23630648"
-doi: "10.5281/zenodo.23630648"
+url: "https://doi.org/10.5281/zenodo.24293479"
+doi: "10.5281/zenodo.24293479"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24293479"
+    description: "This version (v1.2.0)"
+  - type: doi
+    value: "10.5281/zenodo.24096789"
+    description: "Concept DOI for the titan-audit software deposit"
+  - type: doi
+    value: "10.5281/zenodo.23630648"
+    description: "Whitepaper (technical note)"
 license: Apache-2.0
 license-url: "https://github.com/BenFrohman/titan-audit/blob/main/LICENSE"
 version: "1.2.0"
-date-released: "2026-10-24"
+date-released: "2026-11-16"
 keywords:
   - "Lean 4"
   - "Mathlib"

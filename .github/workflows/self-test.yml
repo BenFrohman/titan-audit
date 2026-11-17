@@ -1,0 +1,98 @@
+name: Self-test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  self-test-local:
+    name: Self-test (uses: ./)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Run titan-audit action on the fixture
+        id: audit
+        uses: ./
+        with:
+          project-path: tests/fixture
+          fail-on-vacuity: "true"
+          sign-report: "true"
+          use-mathlib-cache: "false"
+          no-build: "false"
+          output-dir: titan-audit-report
+
+      - name: Assert action outputs
+        run: |
+          set -euo pipefail
+          echo "verdict=${{ steps.audit.outputs.verdict }}"
+          echo "theorems-total=${{ steps.audit.outputs.theorems-total }}"
+          echo "theorems-clean=${{ steps.audit.outputs.theorems-clean }}"
+          echo "vacuity-warnings=${{ steps.audit.outputs.vacuity-warnings }}"
+          echo "tree-sha256=${{ steps.audit.outputs.tree-sha256 }}"
+          echo "report-json-path=${{ steps.audit.outputs.report-json-path }}"
+          echo "report-md-path=${{ steps.audit.outputs.report-md-path }}"
+          test "${{ steps.audit.outputs.verdict }}" = "PASS"
+          test "${{ steps.audit.outputs.theorems-total }}" = "2"
+          test "${{ steps.audit.outputs.theorems-clean }}" = "2"
+          test "${{ steps.audit.outputs.vacuity-warnings }}" = "0"
+          echo "${{ steps.audit.outputs.tree-sha256 }}" | grep -Eq '^[0-9a-f]{64}$'
+          test -f "${{ steps.audit.outputs.report-json-path }}"
+          test -f "${{ steps.audit.outputs.report-md-path }}"
+
+  marketplace-pin:
+    name: Marketplace pin (uses: BenFrohman/titan-audit@v1.2.0)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Run published titan-audit@v1.2.0 on the fixture
+        id: audit
+        uses: BenFrohman/titan-audit@v1.2.0
+        with:
+          project-path: tests/fixture
+          fail-on-vacuity: "true"
+          sign-report: "true"
+          use-mathlib-cache: "false"
+          no-build: "false"
+          output-dir: titan-audit-report
+
+      - name: Assert action outputs
+        run: |
+          set -euo pipefail
+          echo "verdict=${{ steps.audit.outputs.verdict }}"
+          echo "theorems-total=${{ steps.audit.outputs.theorems-total }}"
+          echo "theorems-clean=${{ steps.audit.outputs.theorems-clean }}"
+          echo "vacuity-warnings=${{ steps.audit.outputs.vacuity-warnings }}"
+          echo "tree-sha256=${{ steps.audit.outputs.tree-sha256 }}"
+          echo "report-json-path=${{ steps.audit.outputs.report-json-path }}"
+          echo "report-md-path=${{ steps.audit.outputs.report-md-path }}"
+          test "${{ steps.audit.outputs.verdict }}" = "PASS"
+          test "${{ steps.audit.outputs.theorems-total }}" = "2"
+          test "${{ steps.audit.outputs.theorems-clean }}" = "2"
+          test "${{ steps.audit.outputs.vacuity-warnings }}" = "0"
+          echo "${{ steps.audit.outputs.tree-sha256 }}" | grep -Eq '^[0-9a-f]{64}$'
+          test -f "${{ steps.audit.outputs.report-json-path }}"
+          test -f "${{ steps.audit.outputs.report-md-path }}"
