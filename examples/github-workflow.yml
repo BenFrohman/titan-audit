@@ -1,0 +1,47 @@
+# Example consumer workflow for the GitHub Marketplace action.
+# Copy into a Lean 4 repository as `.github/workflows/titan-audit.yml`.
+# Pin a release tag. The current Marketplace release is v1.2.0.
+#
+# Listing: https://github.com/marketplace/actions/titan-audit-lean-4-axiom-vacuity-firewall
+# Software DOI (v1.2.0): https://doi.org/10.5281/zenodo.24293479
+
+name: Titan-Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install Lean / Lake. titan-audit does not install a toolchain itself.
+      # A typical Lean repository has `lean-toolchain` at the repo root.
+      - uses: leanprover/lean-action@v1
+        with:
+          use-mathlib-cache: true
+
+      - name: Run titan-audit
+        id: audit
+        uses: BenFrohman/titan-audit@v1.2.0
+        with:
+          project-path: "."
+          fail-on-vacuity: "true"
+          sign-report: "true"
+          use-mathlib-cache: "false"
+          no-build: "false"
+          output-dir: titan-audit-report
+
+      - name: Use audit outputs
+        run: |
+          echo "verdict=${{ steps.audit.outputs.verdict }}"
+          echo "theorems-total=${{ steps.audit.outputs.theorems-total }}"
+          echo "theorems-clean=${{ steps.audit.outputs.theorems-clean }}"
+          echo "vacuity-warnings=${{ steps.audit.outputs.vacuity-warnings }}"
+          echo "tree-sha256=${{ steps.audit.outputs.tree-sha256 }}"
+          echo "report-json-path=${{ steps.audit.outputs.report-json-path }}"
+          echo "report-md-path=${{ steps.audit.outputs.report-md-path }}"
